@@ -33,6 +33,11 @@
                                   <input type="email" value="{{ ($owner->email) }}" id="email" name="email" required class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                   <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                 </div>
+                              <div class="mx-auto">
+                                <div class="relative">
+                                  <label for="shop" class="leading-7 text-sm text-gray-600" >店名</label>
+                                  <div class="w-full bg-gray-100 bg-opacity-50 rounded focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"> {{ $owner->shop->name }}</div>
+                                </div>
                               </div>
                               <div class="mx-auto">
                                 <div class="relative">
