@@ -9,14 +9,16 @@
         <div class="sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
+                    {{-- <x-input-error :messages="$errors->get('image','mines','max')" class="mt-2" / --}}
+
                     <form method="POST" action="{{ route('owner.shops.update' , ['shop' => $shop->id ]) }}" enctype="multipart/form-data">
+                        @csrf
                         <div class="m-2">
-                            @csrf
                               <div class="mx-auto">
                                 <div class="relative">
                                   <label for="image" class="leading-7 text-sm text-gray-600">画像</label>
-                                  <input type="file" id="image" name="image" accept="image/png,image/jpeg,image/jpg"class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                                  <x-input-error :messages="$errors->get('name')" class="mt-2" /
+                                  <input type="file" id="image" name="image" accept="image/png,image/jpeg,image/jpg" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                                  <x-input-error :messages="$errors->all()" class="mt-2" />
                               </div>
                                 </div>
                             </div>

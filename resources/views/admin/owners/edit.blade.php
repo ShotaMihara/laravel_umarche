@@ -24,7 +24,7 @@
                                 <div class="relative">
                                   <label for="name" class="leading-7 text-sm text-gray-600">オーナー名</label>
                                   <input type="text" value="{{ ($owner->name) }}" id="name" name="name" required class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-                                  <x-input-error :messages="$errors->get('name')" class="mt-2" /
+                                  <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                 </div>
                               </div>
                               <div class="mx-auto">
