@@ -27,7 +27,7 @@
                                   <x-input-error :messages="$errors->get('information')" class="mt-2" />
                                 </div>
                                 <div class="w-32">
-                                    <x-shop-thumbnail :filename="$shop->filename"/>
+                                    <x-thumbnail :filename="$shop->filename" type="shops" />
                                 </div>
                             <div class="mx-auto">
                                 <div class="relative">
