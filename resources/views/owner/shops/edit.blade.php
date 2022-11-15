@@ -47,7 +47,7 @@
                                 </div>
                             <div class="p-2 w-full mt-4 flex justify-around" >
                                 <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">更新する</button>
-                                <button type="botton" onclick="location.href='{{ route('owner.shops.index') }}'"class=" text-white bg-gray-400 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded text-lg">戻る</button>
+                                <button type="button" onclick="location.href='{{ route('owner.shops.index') }}'"class=" text-white bg-gray-400 border-0 py-2 px-8 focus:outline-none hover:bg-gray-600 rounded text-lg">戻る</button>
                             </div>                          
                         </div>
                     </form>
