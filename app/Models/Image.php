@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Owner;
 
+
 class Image extends Model
 {
     use HasFactory;
@@ -13,7 +14,6 @@ class Image extends Model
     protected $fillable = [
         'owner_id',
         'filename',
-        'is_selling',
     ];
 
 

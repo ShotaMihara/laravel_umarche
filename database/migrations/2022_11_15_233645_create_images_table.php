@@ -19,7 +19,7 @@ return new class extends Migration
             ->constrained()
             ->onUpdate('cascade')
             ->onDelete('cascade');
-            $table->string('name');
+            $table->string('filename');
             $table->string('title')->nullable();
             $table->timestamps();
         });
