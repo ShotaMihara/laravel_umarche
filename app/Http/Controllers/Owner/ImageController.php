@@ -18,7 +18,7 @@ class ImageController extends Controller
 
             $id = $request->route()->parameter('image');
             if(!is_null($id)){
-                $imagesOwnerId = Images::findOrFail($id)->owner->id;
+                $imagesOwnerId = Image::findOrFail($id)->owner->id;
                 $imageId = (int)$imagesOwnerId;
                 if($imageId !==Auth::id()){
                     abort(404);
@@ -92,7 +92,8 @@ class ImageController extends Controller
      */
     public function edit($id)
     {
-        //
+        $image = Image::findOrFail($id);
+        return view('owner.images.edit' , compact('image'));
     }
 
     /**
@@ -104,7 +105,17 @@ class ImageController extends Controller
      */
     public function update(UploadImageRequest $request, $id)
     {
-        //
+        $request->validate([
+            'title' => ['string', 'max:55'],
+        ]);
+
+        $image = Image::findOrFail($id);
+        $image->title = $request->title;
+
+        $image->save();
+        return redirect()
+        ->route('owner.images.index')
+        ->with(['message' => '画像情報を更新しました。', 'status' => 'info']);    
     }
 
     /**
