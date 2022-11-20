@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
                 ownerSeeder::class,
                 ShopSeeder::class,
                 ImageSeeder::class,
+                CategorySeeder::class,
             ]);
 
     }
