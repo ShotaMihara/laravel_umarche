@@ -33,6 +33,10 @@ class Owner extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function shop()
+    {
+        return $this->hasOne(Shop::class);
+    }
 
     /**
      * The attributes that should be cast.
