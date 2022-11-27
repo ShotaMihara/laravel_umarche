@@ -20,12 +20,14 @@
                                   <input type="text" value="{{ ($shop->name) }}" id="name" name="name" required class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                   <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                 </div>
+                            </div>
                             <div class="mx-auto">
                                 <div class="relative">
                                   <label for="information" class="leading-7 text-sm text-gray-600">店舗情報 ※必須</label>
                                   <textarea  id="information" name="information" rows="10" required class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">{{ $shop->information }}</textarea>
                                   <x-input-error :messages="$errors->get('information')" class="mt-2" />
                                 </div>
+                            </div>
                                 <div class="w-32">
                                     <x-thumbnail :filename="$shop->filename" type="shops" />
                                 </div>
@@ -35,8 +37,6 @@
                                   <input type="file" id="image" name="image" accept="image/png,image/jpeg,image/jpg" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
                                   <x-input-error :messages="$errors->get('image')" class="mt-2" />
                                 </div>
-                            </div>
-                            </div>
                                 <div class="relative  ">
                                     <div class="mx-auto ">
                                         <div class="relative ">
